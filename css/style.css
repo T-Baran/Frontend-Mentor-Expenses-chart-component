@@ -1,0 +1,209 @@
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 8px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f8e9dd;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+}
+
+.container {
+  width: Min(600px, 98vw);
+}
+
+.container__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin-inline: auto;
+  background-color: #ec775f;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+}
+
+.container__head .balance {
+  color: #f8e9dd;
+}
+
+.container__head .balance .balance__amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.container__main {
+  background-color: #fffaf5;
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 15px;
+  margin-top: 20px;
+  color: #382314;
+  padding-top: 20px;
+}
+
+.container__main #generatedData {
+  width: 90%;
+  margin-inline: auto;
+  height: 50%;
+}
+
+.container__main #generatedData .bars {
+  margin-top: 30px;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.container__main #generatedData .bars .itemContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 100%;
+  width: Max(25px, 15%);
+}
+
+.container__main #generatedData .bars .itemContainer .item {
+  background-color: #ec775f;
+  width: 100%;
+  height: 40%;
+  border-radius: 5px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+}
+
+.container__main #generatedData .bars .itemContainer .item .itemHover {
+  position: absolute;
+  background-color: #382314;
+  color: #f8e9dd;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  z-index: 5;
+  width: 120%;
+  height: 30px;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(10%, -120%);
+          transform: translate(10%, -120%);
+  border-radius: 7.5px;
+}
+
+.container__main #generatedData .bars .itemContainer .item .itemHover::before {
+  content: "$";
+}
+
+.container__main #generatedData .bars .itemContainer p {
+  font-size: 0.7rem;
+  color: #93867b;
+  margin: 10px auto 20px auto;
+}
+
+.container__main h1 {
+  width: 90%;
+  margin-inline: auto;
+  font-size: 1.5rem;
+  margin-bottom: 100px;
+}
+
+.container__main hr {
+  width: 90%;
+  color: #f8e9dd;
+  margin-inline: auto;
+}
+
+.container__main .bottomData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 90%;
+  margin: 30px auto;
+  padding-bottom: 30px;
+}
+
+.container__main .bottomData .thisMonth {
+  text-align: start;
+}
+
+.container__main .bottomData .thisMonth .thisMonthTitle {
+  color: #93867b;
+  font-size: 0.8rem;
+}
+
+.container__main .bottomData .thisMonth .thisMonthAmount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.container__main .bottomData .lastMonth {
+  text-align: end;
+}
+
+.container__main .bottomData .lastMonth .lastMonthAmount {
+  font-weight: 700;
+}
+
+.container__main .bottomData .lastMonth .lastMonthTitle {
+  color: #93867b;
+  font-size: 0.8rem;
+}
+
+.dNone {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

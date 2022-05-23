@@ -1,0 +1,185 @@
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 8px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+// above is css from frondend Mentor
+// below is mine css
+$font: "DM Sans", sans-serif;
+$bradius: 15px;
+$fsize: 18px;
+$color: (
+  primaryred: hsl(10, 79%, 65%),
+  cyan: hsl(186, 34%, 60%),
+  darkbrown: hsl(25, 47%, 15%),
+  mediumbrown: hsl(28, 10%, 53%),
+  cream: hsl(27, 66%, 92%),
+  verypaleorange: hsl(33, 100%, 98%),
+);
+
+@function color($color-name) {
+  @return map-get($color, $color-name);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font;
+  background-color: color(cream);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $fsize;
+}
+
+.container {
+  width: Min(600px, 98vw);
+}
+.container__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-inline: auto;
+  background-color: color(primaryred);
+  padding: 1.5rem 2rem;
+  border-radius: $bradius;
+
+  .balance {
+    color: color(cream);
+
+    .balance__amount {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 5px;
+    }
+  }
+}
+.container__main {
+  background-color: color(verypaleorange);
+  width: 90%;
+  margin-inline: auto;
+  border-radius: $bradius;
+  margin-top: 20px;
+  color: color(darkbrown);
+  padding-top: 20px;
+
+  #generatedData {
+    width: 90%;
+    margin-inline: auto;
+    height: 50%;
+
+    .bars {
+      margin-top: 30px;
+      height: 30vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+
+      .itemContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 100%;
+        width: Max(25px, 15%);
+
+        .item {
+          background-color: color(primaryred);
+          // min-height: 1px;
+          //   min-width: 25px;
+          //   max-width: 15%;
+          width: 100%;
+          height: 40%;
+          border-radius: 5px;
+          flex-shrink: 0;
+          position: relative;
+
+          .itemHover {
+            position: absolute;
+            background-color: color(darkbrown);
+            color: color(cream);
+            text-align: center;
+            line-height: 30px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            z-index: 5;
+            width: 120%;
+            height: 30px;
+            top: 0;
+            right: 0;
+            transform: translate(10%, -120%);
+            border-radius: $bradius/2;
+          }
+          .itemHover::before {
+            content: "$";
+          }
+        }
+
+        p {
+          font-size: 0.7rem;
+          color: color(mediumbrown);
+          margin: 10px auto 20px auto;
+        }
+      }
+    }
+  }
+
+  h1 {
+    width: 90%;
+    margin-inline: auto;
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+  }
+
+  hr {
+    width: 90%;
+    color: color(cream);
+    margin-inline: auto;
+  }
+
+  .bottomData {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+    margin: 30px auto;
+    padding-bottom: 30px;
+
+    .thisMonth {
+      text-align: start;
+
+      .thisMonthTitle {
+        color: color(mediumbrown);
+        font-size: 0.8rem;
+      }
+      .thisMonthAmount {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+    .lastMonth {
+      text-align: end;
+
+      .lastMonthAmount {
+        font-weight: 700;
+      }
+      .lastMonthTitle {
+        color: color(mediumbrown);
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+.dNone {
+  display: none;
+}

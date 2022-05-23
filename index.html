@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script defer src="./app.js"></script>
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__head">
+        <div class="balance">
+          <div class="balance__title">My balance</div>
+          <div class="balance__amount">$921.48</div>
+        </div>
+        <div class="icon"><img src="./images/logo.svg" alt="" /></div>
+      </div>
+      <div class="container__main">
+        <h1>Spending - Last 7 days</h1>
+        <div id="generatedData">
+          <div class="bars">
+            <!-- <div class="item"></div> -->
+          </div>
+          <!-- <div class="bar-tags"></div> -->
+        </div>
+        <hr />
+        <div class="bottomData">
+          <div class="thisMonth">
+            <div class="thisMonthTitle">Total this month</div>
+            <div class="thisMonthAmount">$478.33</div>
+          </div>
+          <div class="lastMonth">
+            <div class="lastMonthAmount">+2.4%</div>
+            <div class="lastMonthTitle">from last month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Spending - Last 7 days mon tue wed thu fri sat sun !-->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Tomasz Baran</a>.
+    </div>
+  </body>
+</html>
